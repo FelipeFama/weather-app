@@ -1,4 +1,3 @@
-//
 let weather = {
   apiKey: "ea288e6a8411c22b3f70b0d5f7a8a3b6",
   fetchWeather: function (city) {
