@@ -1,31 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather app</title>
-  <link rel="stylesheet" href="./style.css">
-  <script src="./script.js" defer></script>
-</head>
-<body>
-  <div class="card">
-    <div class="search">
-      <input type="text" class="search-bar" placeholder="Search">
-      <button><svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-      </svg></button>
-    </div>
-    <div class="weather loading">
-      <h2 class="city">Weather in Fortaleza</h2>
-      <h1 class="temp">28°C</h1>
-      <div class="flex">
-        <img src="https://openweathermap.org/img/wn/01d.png" alt="weather icon" class="icon">
-        <div class="description">Clear sky</div>
-      </div>
-      <div class="humidity">humidity: 40%</div>
-      <div class="wind">Wind a speed: 6.2 km/h</div>
-    </div>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
