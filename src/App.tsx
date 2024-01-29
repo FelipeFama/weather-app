@@ -1,14 +1,16 @@
+import { SearchBar } from "./components/SearchBar";
+import { WeatherInfo } from "./components/WeatherInfo";
 import { GlobalStyles } from "./styles/global";
+import { WeatherCard } from "./styles/style";
 
-function App() {
+export default function App() {
   return (
     <>
       <GlobalStyles />
-      <main>
-        <section>weather app</section>
-      </main>
+      <WeatherCard>
+        <WeatherInfo />
+        <SearchBar />
+      </WeatherCard>
     </>
   );
 }
-
-export default App;
