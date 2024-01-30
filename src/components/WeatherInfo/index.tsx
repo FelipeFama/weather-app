@@ -18,17 +18,17 @@ export const WeatherInfo: React.FC<WeatherInfoProps> = ({
         <p>Loading...</p>
       ) : data ? (
         <>
-          <h2>`Weather in Fortaleza`</h2>
-          <h1>28ºC</h1>
+          <h2>{`Weather in ${data?.name || ""}`}</h2>
+          <h1>{`${data?.main.temp} ºC`}</h1>
           <section>
             <img
-              src="https://openweathermap.org/img/wn/01d.png"
+              src={`https://openweathermap.org/img/wn/${data?.weather[0].icon}.png`}
               alt="weather icon"
             />
-            <p>Clear sky</p>
+            <p>{data?.weather[0].description}</p>
           </section>
-          <p>humidity: 40%</p>
-          <p>Wind a speed: 6.2 km/h</p>
+          <p>{`humidity: ${data?.main.humidity}%`}</p>
+          <p>{`Wind Speed: ${data?.wind.speed} km/h`}</p>
         </>
       ) : (
         <p>Data not available</p>

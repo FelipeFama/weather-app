@@ -18,6 +18,7 @@ export const fetchWeather = async (city: string) => {
 export const fetchWeatherByIP = async () => {
   try {
     const response = await axios.get("https://ipinfo.io/json");
+    console.log(response)
     return response.data.city;
   } catch (error) {
     console.error("Error fetching IP data:", error);
