@@ -1,5 +1,5 @@
 import React from "react";
-import { Weather } from "./styles";
+import { Content, Name, Temperature, Weather } from "./styles";
 import { WeatherData } from "../types";
 
 interface WeatherInfoProps {
@@ -17,15 +17,15 @@ export const WeatherInfo: React.FC<WeatherInfoProps> = ({
         <p>Loading...</p>
       ) : data ? (
         <>
-          <h2>{`Weather in ${data?.name || ""}`}</h2>
-          <h1>{`${data?.main.temp} ºC`}</h1>
-          <section>
+          <Name>{`Weather in ${data?.name || ""}`}</Name>
+          <Temperature>{`${data?.main.temp} ºC`}</Temperature>
+          <Content>
             <img
               src={`https://openweathermap.org/img/wn/${data?.weather[0].icon}.png`}
               alt="weather icon"
             />
             <p>{data?.weather[0].description}</p>
-          </section>
+          </Content>
           <p>{`humidity: ${data?.main.humidity}%`}</p>
           <p>{`Wind Speed: ${data?.wind.speed} km/h`}</p>
         </>
