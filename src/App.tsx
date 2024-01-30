@@ -13,12 +13,17 @@ export const App: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const city = await fetchWeatherByIP();
+        const ipInfoData = await fetchWeatherByIP();
+        const city = ipInfoData?.city || "Fortaleza";
         const data = await fetchWeather(city);
-        console.log(city);
+
         setWeatherData(data);
       } catch (error) {
-        console.error("Error fetching weather data:", error);
+        error;
+
+        const defaultCity = "Fortaleza";
+        const data = await fetchWeather(defaultCity);
+        setWeatherData(data);
       } finally {
         setIsLoading(false);
       }
@@ -33,7 +38,7 @@ export const App: React.FC = () => {
       const data = await fetchWeather(query);
       setWeatherData(data);
     } catch (error) {
-      console.error("Error fetching weather data:", error);
+      error;
     } finally {
       setIsLoading(false);
     }

@@ -11,7 +11,6 @@ export const WeatherInfo: React.FC<WeatherInfoProps> = ({
   data,
   isLoading,
 }) => {
-  console.log(data);
   return (
     <Weather className={isLoading ? "loading" : ""}>
       {isLoading ? (
