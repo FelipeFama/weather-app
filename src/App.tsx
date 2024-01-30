@@ -37,6 +37,10 @@ export const App: React.FC = () => {
     try {
       const data = await fetchWeather(query);
       setWeatherData(data);
+      if (data) {
+        const { name } = data;
+        document.body.style.backgroundImage = `url('https://source.unsplash.com/1600x900/?${name}')`;
+      }
     } catch (error) {
       error;
     } finally {
