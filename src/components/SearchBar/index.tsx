@@ -16,7 +16,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
   return (
     <Search>
       <InputSearch type="text" placeholder="Search" onKeyUp={handleSearch} />
-      <ButtonSearch>
+      <ButtonSearch aria-label="button">
         <BiSearch />
       </ButtonSearch>
     </Search>
