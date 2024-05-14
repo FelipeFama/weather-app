@@ -2,11 +2,12 @@
 
 ![weather-app](https://user-images.githubusercontent.com/91050670/184713148-80e96c8c-ec2f-46b7-99d5-41b6c4778462.png)
 
-## :rocket: Project information.
+## :rocket: Run Project
 
-- Web application that returns the city's weather information.
-- Weather Api website: [OpenWeather](https://openweathermap.org/)
-- IpInfo Api Website: [IpInfo](https://ipinfo.io/developers)
+```bash
+bun install
+bun run dev
+```
 
 ## :wrench: Technologies used
 
@@ -17,6 +18,12 @@
 ![Axios](https://img.shields.io/badge/axios-671ddf?&style=for-the-badge&logo=axios&logoColor=white)
 
 ## :book: Project Information
+- Web application that returns the city's weather information.
+  
+- Weather Api website: [OpenWeather](https://openweathermap.org/)
+  
+- IpInfo Api Website: [IpInfo](https://ipinfo.io/developers)
+
 - Weather App 
 
 - Semantic HTML5 markup
